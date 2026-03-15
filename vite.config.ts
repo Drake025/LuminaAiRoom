@@ -21,4 +21,12 @@ export default defineConfig(({mode}) => {
       hmr: process.env.DISABLE_HMR !== 'true',
     },
   };
+
+  import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  base: '/LuminaAiRoom/',   // 👈 this is the key
+  plugins: [react()],
+})
 });
